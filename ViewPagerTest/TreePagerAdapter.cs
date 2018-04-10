@@ -45,9 +45,5 @@ namespace ViewPagerTest
             var viewPager = container.JavaCast<ViewPager>();
             viewPager.RemoveView(view as View);
         }
-        public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
-        {
-            return new Java.Lang.String(treeCatalog[position].caption);
-        }
     }
 }

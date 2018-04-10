@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using Android.Support.V4.View;
+using Android.Support.Design.Widget;
 
 namespace ViewPagerTest
 {
@@ -16,6 +17,8 @@ namespace ViewPagerTest
             TreeCatalog treeCatalog = new TreeCatalog();
             viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
             viewPager.SetCurrentItem(1, false);
+            var dots = FindViewById<TabLayout>(Resource.Id.dots);
+            dots.SetupWithViewPager(viewPager, true); // <- magic here
         }
     }
 }
